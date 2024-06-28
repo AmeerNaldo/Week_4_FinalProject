@@ -19,6 +19,23 @@ li {
   list-style-type: none;
 }
 
+img {
+  max-width: 100%;
+}
+
+.red {
+  color: #d10000;
+}
+
+input {
+  color: rgba(0, 0, 0, 0.87);
+  width: 100%;
+  max-width: 800px;
+  height: 60px;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
 /*
 
     NAVIGATION
@@ -40,7 +57,61 @@ nav {
   display: flex;
 }
 
+.nav__link {
+  padding: 0 12px;
+}
+
+.nav__links {
+  font-size: 18px;
+  font-weight: 700;
+  color: #d10000;
+}
+
 .popcorn__logo--title {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.popcorn__logo {
+  width: 80px;
+  margin-right: 12px;
+}
+
+/*
+
+    LANDING
+
+*/
+
+.overlay {
+  background-image: url(movie_background_image.jpg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.overlay:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.content__wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

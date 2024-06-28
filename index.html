@@ -11,18 +11,31 @@
     ></script>
   </head>
   <body>
+    <section id="landing">
+
     <nav>
         <figure>
             <div class="popcorn__logo--title">
-                <img id="popcorn__logo" src="./assets/popcorn.png" alt="">
-                <h3>Popcorn Movies</h3>
+                <img class="popcorn__logo" src="./assets/popcorn.png" alt="">
+                <h3><span class="red">Popcorn Movies</span></h3>
             </div>
         </figure>
       <ul class="nav__link--list">
-        <li class="nav__link"><a href="#">Home</a></li>
-        <li class="nav__link"><a href="#">Find your movie</a></li>
-        <li class="nav__link"><a href="#">Contact</a></li>
+        <li class="nav__link"><a class="nav__links" href="#">Home</a></li>
+        <li class="nav__link"><a class="nav__links" href="#">Movies</a></li>
+        <li class="nav__link"><a class="nav__links" href="#">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="content__wrapper">
+      <h1>Browse our <span class="red">movies</span></h1>
+      <div class="input__wrapper">
+        <input type="text" placeholder="Search by Name">
+        <div class="search__wrapper"><i class="fas fa-magnifying-glass"></i></div>
+      </div>
+    </div>
+
+    <div class="overlay"></div>
+  </section>
   </body>
 </html>
