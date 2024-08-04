@@ -3,12 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Popcorn Movies</title>
     <link rel="stylesheet" href="./index.css" />
-    <script
-      src="https://kit.fontawesome.com/c8e4d183c2.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/50ea0f9d8b.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <section id="landing">
@@ -27,10 +24,28 @@
       </ul>
     </nav>
 
-    <div class="content__wrapper">
+
+    <div class="features__wrapper">
       <h1>Browse our <span class="red">movies</span></h1>
+      <div class="featured__movies">
+        <figure>
+          <img class="featured__movie" src="./assets/onepiece_movie.jpg" alt="">
+          <h3 class="movie__title">One Piece Red</h3>
+        </figure>
+        <figure>
+          <img class="featured__movie" src="./assets/naruto_movie.jpg" alt="">
+          <h3 class="movie__title">Naruto Shippuden Bonds</h3>
+        </figure>
+        <figure>
+          <img class="featured__movie" src="./assets/dragonballz_movie.jpg" alt="">
+          <h3 class="movie__title">Dragon Ball Z: Broly</h3>
+        </figure>
+      </div>
+    </div>
+
+    <div class="content__wrapper">
       <div class="input__wrapper">
-        <input type="text" placeholder="Search by Name">
+        <button class="input__btn" role="button"><span class="text">Search Movies</span></button>
         <div class="search__wrapper"><i class="fas fa-magnifying-glass"></i></div>
       </div>
     </div>
