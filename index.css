@@ -75,6 +75,11 @@ nav {
   font-size: 18px;
   font-weight: 700;
   color: #d10000;
+  transition: all 300ms ease;
+}
+
+.nav__links:hover {
+  text-decoration: underline;
 }
 
 .popcorn__logo--title {
