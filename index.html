@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Popcorn Movies</title>
     <link rel="stylesheet" href="./index.css"/>
-    <script src="app.js"></script>
+    <script src="index.js"></script>
     <script src="https://kit.fontawesome.com/50ea0f9d8b.js" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -18,9 +18,19 @@
             </div>
         </figure>
       <ul class="nav__link--list">
-        <li class="nav__link"><a class="nav__links" href="#">Home</a></li>
+        <li class="nav__link">
+          <div class="input__wrapper">
+            <a href="movies.html">
+              <button class="input__btn">
+              <span class="text">Search Movies</span>
+              </button>
+            </a>
+            <div class="search__wrapper"></div>
+          </div>
+        </li>
+        <!-- <li class="nav__link"><a class="nav__links" href="#">Home</a></li>
         <li class="nav__link"><a class="nav__links" href="movies.html">Movies</a></li>
-        <li class="nav__link"><a class="nav__links" href="#">Contact</a></li>
+        <li class="nav__link"><a class="nav__links" href="#">Contact</a></li> -->
       </ul>
     </nav>
 
@@ -88,10 +98,6 @@
           <i class="fas fa-star-half-alt"></i>
         </div>
       </figure>
-    </div>
-    <div class="input__wrapper">
-      <button class="input__btn" role="button"><span class="text">Search Movies</span></button>
-      <div class="search__wrapper"></div>
     </div>
 </div>
 

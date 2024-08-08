@@ -1,26 +1,26 @@
-/*
-const movieListEl = document.querySelector(".movie-list");
-const id = localStorage.getItem("Title");
+function moviesHTML(moviesPage) {
+  localStorage.setItem('movies.html', moviesPage);
+  window.location.href = 'movies.html';
+}
 
-let movieInput = "naruto";
-
-async function onSearchChange(event) {
-    const id = event.target.value;
-    renderMovies(id);
-}*/
 
 const movieListEl = document.querySelector(".movie-list");
 
 
 async function renderMovies() {
   const movies = await fetch(
-    "http://www.omdbapi.com/?apikey=e7fd5705&s=naruto"
+    `http://www.omdbapi.com/?apikey=e7fd5705&s=naruto`
   );
   const movieSearch = await movies.json();
   movieListEl.innerHTML = movieSearch.map((Search) => movieHTML(Search)).join("");
 }
 
 renderMovies();
+
+function moviePosts(Title) {
+  localStorage.setItem("Title", Title);
+  window.location.href = `${window.location.origin}/movies.html`;
+}
 
 function movieHTML(movie) {
   return `<div class="movie-box">
