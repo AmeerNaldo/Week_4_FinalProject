@@ -1,8 +1,3 @@
-function moviesHTML(moviesPage) {
-  localStorage.setItem('movies.html', moviesPage);
-  window.location.href = 'movies.html';
-}
-
 
 const movieListEl = document.querySelector(".movie-list");
 

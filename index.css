@@ -265,6 +265,34 @@ nav {
 
 /*
 
+FOOTER
+
+*/
+
+footer {
+  background-color: rgb(56, 2, 2);
+}
+
+.footer__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__logo--img {
+  width: 70px;
+}
+
+.footer__social--list {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+  margin: 28px 0;
+}
+/*
+
 MEDIA QUERIES
 
 */
