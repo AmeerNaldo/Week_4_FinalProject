@@ -1,41 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movies Section</title>
-    <link rel="stylesheet" href="./index.css">
-    <script src="movies.js"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
     <div class="movie__search">
-        <a href="/index.html">
-            <button>← Back</button>
-        </a>
-        <div class="movie__search--container">
-            <label class="movie__search--label">
-                Search by Name
-            </label>
-            <input id="movie-name" type="text" onchange="OnSearchChange(event)">
-        </div>
+      <a href="/index.html">
+        <button>← Back</button>
+      </a>
+      <div class="movie__search--container">
+        <label class="movie__search--label"> Search by Name </label>
+        <input
+          id="movie-name"
+          type="text"
+          onchange="renderMovies(document.getElementById('movie-name').value)"
+        />
+      </div>
     </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="movie-list">
-                <div class="movie">
-                    <div class="movie-box">
-                        <div class="movie-box__container">
-                            <h3><b>Title:</b></h3>
-                            <h5>Year:</h5>
-                            <img src="" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="movie-list">
+        
     </div>
-</body>
-
-
+  </body>
+  <script src="movies.js"></script>
 </html>

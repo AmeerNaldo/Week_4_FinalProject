@@ -1,16 +1,15 @@
-
+const accessKey = "e7fd5705"
 const movieListEl = document.querySelector(".movie-list");
 
 
-async function renderMovies() {
+async function renderMovies(userSearch) {
   const movies = await fetch(
-    `http://www.omdbapi.com/?apikey=e7fd5705&s=naruto`
+    `http://www.omdbapi.com/?apikey=e7fd5705&s=${userSearch}`
   );
   const movieSearch = await movies.json();
-  movieListEl.innerHTML = movieSearch.map((Search) => movieHTML(Search)).join("");
+  console.log(movieSearch);
+  movieListEl.innerHTML = movieSearch.Search.map((x) => movieHTML(x)).join("");
 }
-
-renderMovies();
 
 function moviePosts(Title) {
   localStorage.setItem("Title", Title);
@@ -19,10 +18,8 @@ function moviePosts(Title) {
 
 function movieHTML(movie) {
   return `<div class="movie-box">
-    <div class="movie-box__container">
-        <h3><b>${Search.Title}</b></h3>
-        <h5>${Search.Year}</h5>
-        <img src="${Search.Poster}" alt="">
-    </div>
+        <h3><b>${movie.Title}</b></h3>
+        <h5>${movie.Year}</h5>
+        <img class="movie-Img" src="${movie.Poster}" alt="">
 </div>`;
 }
