@@ -46,11 +46,6 @@ input {
   background-color: rgb(56, 2, 2);
 }
 
-#landing {
-  margin: auto;
-  background-color: #faf9f6;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -93,31 +88,45 @@ nav {
 
 /*
 
-    LANDING
-
-*/
-
-/*
-
     FEATURES
 
 */
 
+.features__container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: lightgrey;
+}
+
+.features__row {
+  max-width: 1200px;
+}
+
 .features__title {
   text-align: center;
   color: black;
+  padding-top: 24px;
 }
 
 .featured__movies {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
   padding: 32px;
+  justify-content: center;
 }
 
 .movie__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 3);
+  padding: 16px 0;
 }
 
-.movie__img {
+.movie__img,
+.movie-img {
+  width: 200px;
   border-radius: 4px;
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
   transition: box-shadow 0.3s ease;
@@ -125,6 +134,7 @@ nav {
 
 .movie__img:hover {
   box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
 }
 
 .movie__title {
@@ -190,7 +200,7 @@ nav {
   padding: 0.6em 2em;
   border: none;
   outline: none;
-  color: rgb(255, 255, 255);
+  color: black;
   background: #111;
   cursor: pointer;
   position: relative;
@@ -241,17 +251,18 @@ nav {
   }
 }
 
-.input__btn:after {
+.input__btn:hover:after {
   z-index: -1;
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #222;
+  background: white;
   left: 0;
   top: 0;
   border-radius: 10px;
 }
+
 
 /*
 
@@ -332,6 +343,25 @@ Movies Html
   align-items: center;
 }
 
+.movie__search {
+  display: flex;
+  justify-content: space-around;
+  padding: 32px;
+}
+
+.movie__search--container {
+  display: flex;
+  align-items: center;
+}
+
+.movie__search--label {
+  text-align: center;
+  padding-right: 16px;
+}
+
+#movie-name {
+  border-radius: 4px;
+}
 /*
 
 Movie Display

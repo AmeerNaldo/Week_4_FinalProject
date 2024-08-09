@@ -18,8 +18,8 @@ function moviePosts(Title) {
 
 function movieHTML(movie) {
   return `<div class="movie-box">
-        <h3><b>${movie.Title}</b></h3>
-        <h5>${movie.Year}</h5>
-        <img class="movie-Img" src="${movie.Poster}" alt="">
+        <h3 class="movie__title"><b>${movie.Title}</b></h3>
+        <h5 class="movie__year">${movie.Year}</h5>
+        <img class="movie-img" src="${movie.Poster}" alt="">
 </div>`;
 }
