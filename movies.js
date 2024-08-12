@@ -1,6 +1,6 @@
 const accessKey = "e7fd5705"
 const movieListEl = document.querySelector(".movie-list");
-
+// const searchResultsEl = document.querySelector(".search__results--for")
 
 async function renderMovies(userSearch) {
   const movies = await fetch(
@@ -15,6 +15,13 @@ function moviePosts(Title) {
   localStorage.setItem("Title", Title);
   window.location.href = `${window.location.origin}/movies.html`;
 }
+
+// function search(event) {
+//   event.preventDefault();
+//   const loading = document.querySelector(".modal__over--loading");
+//   loading.classList += " modal__overlay--visible";
+  
+// }
 
 function movieHTML(movie) {
   return `<div class="movie-box">
