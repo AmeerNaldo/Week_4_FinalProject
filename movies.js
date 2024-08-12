@@ -16,12 +16,15 @@ function moviePosts(Title) {
   window.location.href = `${window.location.origin}/movies.html`;
 }
 
-// function search(event) {
-//   event.preventDefault();
-//   const loading = document.querySelector(".modal__over--loading");
-//   loading.classList += " modal__overlay--visible";
+function search(event) {
+  event.preventDefault();
+  const loading = document.querySelector(".modal__overlay--loading");
+  const success = document.querySelector(".modal__overlay--success");
+  loading.classList += " modal__overlay--visible";
+
   
-// }
+  
+}
 
 function movieHTML(movie) {
   return `<div class="movie-box">
