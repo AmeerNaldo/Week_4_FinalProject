@@ -367,6 +367,7 @@ Movies Html
   padding: 20px;
   justify-content: center;
   align-content: center;
+  position: relative;
 }
 
 .movie-box {
@@ -432,6 +433,7 @@ Movies Html
   background: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
+  border-radius: 8px;
 }
 
 .movie__search--label {
@@ -450,6 +452,7 @@ Movies Html
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -459,8 +462,30 @@ Movies Html
 }
 
 .modal__overlay--loading {
-  color: white;
+  color: black;
   font-size: 80px;
+  z-index: -1;
+}
+
+.modal__overlay--success {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+}
+
+.fa-spinner {
+  animation: spinner 750ms infinite linear;
+}
+
+@keyframes spinner {
+  0 {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*
@@ -469,15 +494,55 @@ Movie Display
 
 */
 
+
 /*
 
 MEDIA QUERIES
 
 */
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .button-64 {
     font-size: 24px;
     min-width: 196px;
+  }
+
+  .movie__img {
+    width: 160px;
+  }
+
+  .new__row {
+    padding-top: 24px;
+  }
+
+  .movie__search {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 550px) {
+  .popcorn__logo {
+    width: 48px;
+  }
+
+  .popcorn__movies {
+    font-size: 16px;
+  }
+
+  .movie__wrapper {
+    width: calc(100% / 2);
+  }
+
+  .movie__img {
+    width: 120px;
+  }
+
+  .movie__search {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movie-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

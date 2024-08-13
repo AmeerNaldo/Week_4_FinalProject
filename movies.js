@@ -1,8 +1,10 @@
 const accessKey = "e7fd5705"
 const movieListEl = document.querySelector(".movie-list");
-// const searchResultsEl = document.querySelector(".search__results--for")
+const loading = document.querySelector(".modal__overlay--loading");
 
 async function renderMovies(userSearch) {
+  loading.classList.add("modal__overlay--visible");
+
   const movies = await fetch(
     `http://www.omdbapi.com/?apikey=e7fd5705&s=${userSearch}`
   );
@@ -16,15 +18,11 @@ function moviePosts(Title) {
   window.location.href = `${window.location.origin}/movies.html`;
 }
 
-function search(event) {
-  event.preventDefault();
-  const loading = document.querySelector(".modal__overlay--loading");
-  const success = document.querySelector(".modal__overlay--success");
-  loading.classList += " modal__overlay--visible";
-
-  
-  
-}
+// function search(event) {
+//   event.preventDefault();
+//   const userSearch = document.getElementById("movie-name").value;
+//   renderMovies(userSearch);  
+// }
 
 function movieHTML(movie) {
   return `<div class="movie-box">

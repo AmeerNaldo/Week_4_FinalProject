@@ -18,19 +18,17 @@
         <input
           id="movie-name"
           type="text"
+          placeholder="Enter movie name"
           onchange="renderMovies(document.getElementById('movie-name').value)"
         />
       </div>
     </div>
   </figure>
-    <div class="modal__overlay modal__overlay--loading">
-      <i class="fas fa-spinner"></i>
-    </div>
-    <div class="modal__overlay modal__overlay--success">
-      
-    </div>
+
     <div class="movie-list">
-        
+      <div class="modal__overlay modal__overlay--loading">
+        <i class="fas fa-spinner"></i>
+      </div>
     </div>
   </body>
   <script src="movies.js"></script>
