@@ -360,6 +360,14 @@ Movies Html
 
 */
 
+.search__results--for {
+  text-align: center;
+  padding: 16px 0;
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+}
+
 .movie-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
